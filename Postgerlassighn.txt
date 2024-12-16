@@ -1,0 +1,58 @@
+create table customers (
+id integer primary key,
+firstsname varchar(50) not null,
+lastname varchar(50) ,
+email varchar(255)not null,
+birthday date not null);
+
+
+
+
+WHERE CLAUSE
+	
+select * from language where language_id>1;
+select * from language where language_id<1;
+select * from language where language_id>=1;
+select * from language where language_id<=1;
+select * from language where language_id!=1;
+select * from language where language_id=1;
+
+
+AND
+select * from city where country_id=100 AND city='London';
+
+OR
+select * from city where country_id=100 OR city='London';
+
+NOT
+select * from city where NOT city ='London' limit 10;
+
+IN
+select * from city where country_id IN(100,10);
+
+NOT IN
+select * from city where country_id NOT IN(100,10);
+
+BETWEEN
+select * from city where country_id BETWEEN 10 AND 100 LIMIT 10;
+
+NOT BETWEEN
+select * from city where country_id NOT BETWEEN 10 AND 100 LIMIT 10;
+
+LIKE
+select * from city  where city LIKE 'a%a';
+
+NOT LIKE
+select * from city  where city NOT LIKE 'a%a' LIMIT 10;
+
+IS NULL
+select * from category where name IS NULL;
+
+IS NOT NULL
+select * from category where name IS NOT NULL;
+
+LIMIT
+select * from city limit 25;
+
+OFFSET
+select * from city offset 25;
